@@ -16,15 +16,23 @@
 module assignment8
 
 function add_positional_arguments(a, b, c=2)
+    sum= a + b +c
+    return sum
 end
 
 
 function add_keyword_arguments(;a=1, b=2, c=3)
+    return a + b + c
 end
 
 function return_anonymous_function()
+    return x -> 1 + x^2
 end
 
-export add_positional_arguments, add_keyword_arguments, return_anonymous_function
+function Σ(a, b, c=2)
+    return add_positional_arguments(a, b, c)
+end
+
+export add_positional_arguments, add_keyword_arguments, return_anonymous_function, Σ
 
 end
